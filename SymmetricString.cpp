@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int count = 0;
+    string s,s1;
+    getline(cin, s);
+    int d = s.length();
+    if (d % 2 != 0) 
+    {
+        cout << "no";
+        return 0;
+    }
+    else 
+    {
+        for ( int i = 0 ; i < d/2 ; i++)
+        {
+            if (s[i] == s[d - i - 1])
+            {
+                count++;
+            }
+        }
+    }
+    if (count == d/2)
+    {
+        cout << "yes";
+    }
+    else cout << "no";
+    return 0;
+}
